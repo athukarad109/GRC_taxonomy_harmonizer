@@ -1,0 +1,56 @@
+[
+  {
+    "framework": "NIST 800-53",
+    "control_id": "AC-2",
+    "name": "Account Management",
+    "description": "The organization manages information system accounts, including establishing, activating, modifying, disabling, and removing accounts."
+  },
+  {
+    "framework": "ISO 27001",
+    "control_id": "A.9.2.1",
+    "name": "User Registration and De-registration",
+    "description": "A formal user registration and de-registration process shall be implemented to enable assignment of access rights."
+  },
+  {
+    "framework": "SOC 2",
+    "control_id": "CC6.2",
+    "name": "Provisioning and Deprovisioning",
+    "description": "User access is authorized, modified, and removed based on role and employment status."
+  },
+  {
+    "framework": "NIST 800-53",
+    "control_id": "IA-2",
+    "name": "Identification and Authentication",
+    "description": "The information system uniquely identifies and authenticates organizational users."
+  },
+  {
+    "framework": "ISO 27001",
+    "control_id": "A.9.4.2",
+    "name": "Secure Log-on Procedures",
+    "description": "Where required by the access control policy, access to systems shall be controlled by a secure log-on procedure."
+  },
+  {
+    "framework": "SOC 2",
+    "control_id": "CC6.3",
+    "name": "Authentication Mechanisms",
+    "description": "Authentication mechanisms are used to verify the identity of users before granting access to systems."
+  },
+  {
+    "framework": "NIST 800-53",
+    "control_id": "AU-2",
+    "name": "Audit Events",
+    "description": "The organization determines that the information system is capable of auditing defined events."
+  },
+  {
+    "framework": "ISO 27001",
+    "control_id": "A.12.4.1",
+    "name": "Event Logging",
+    "description": "Event logs that record user activities, exceptions, faults and information security events shall be produced, kept and regularly reviewed."
+  },
+  {
+    "framework": "SOC 2",
+    "control_id": "CC7.2",
+    "name": "Log Collection and Review",
+    "description": "The entity logs and monitors system activity and reviews logs for anomalies and indicators of compromise."
+  }
+]
