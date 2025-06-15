@@ -29,7 +29,7 @@ def harmonize_control(input_data: ControlInput):
 
         summary = summarize_controls(similar_controls)
         return {
-            "unified_result": summary["raw_summary"],
+            "unified_result": summary,
             "matched_controls": similar_controls
         }
     except Exception as e:

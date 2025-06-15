@@ -11,38 +11,41 @@ def summarize_controls(control_list):
             "implementation_steps": []
         }
 
+    # Format the controls into a readable list
     formatted_controls = "\n".join([
         f"- [{c['framework']}] {c['control_id']} - {c['name']}: {c['description']}"
         for c in control_list
     ])
 
-    format_instructions = """
-{
-  "title": "A short meaningful title combining all control intents",
-  "description": "2-3 sentence unified description combining all control goals",
-  "implementation_steps": [
-    {
-      "step": "Step Title 1",
-      "description": "What should be done and why"
-    },
-    {
-      "step": "Step Title 2",
-      "description": "Action with clarity and value"
-    }
-  ]
-}
-"""
-
+    # Explicit and safe prompt
     prompt = f"""
-You are a cybersecurity compliance assistant.
+You are a cybersecurity compliance assistant tasked with summarizing semantically similar security controls.
 
-Your task is to merge the following semantically similar controls into one unified control, with a clear and professional title, summary description, and actionable implementation steps.
+Using the following list of security controls, generate a unified title, a concise 2–3 sentence description, and 2–3 implementation steps in strict JSON format.
 
-Here are the controls:
+### Input Controls ###
 {formatted_controls}
 
-Respond ONLY in this JSON format:
-{format_instructions}
+### Output Format ###
+Respond with ONLY a valid JSON object like this:
+
+{{
+  "title": "Short but meaningful unified control title",
+  "description": "2–3 sentence unified summary combining all control goals",
+  "implementation_steps": [
+    {{
+      "step": "Step Title 1",
+      "description": "What should be done and why"
+    }},
+    {{
+      "step": "Step Title 2",
+      "description": "Action with clarity and value"
+    }}
+  ]
+}}
+
+DO NOT include explanations, markdown, or text outside the JSON object.
+Make sure it is valid JSON.
 """
 
     try:
@@ -53,6 +56,8 @@ Respond ONLY in this JSON format:
         )
 
         raw_output = response["response"].strip()
+
+        # Extract JSON content only
         start = raw_output.find("{")
         if start == -1:
             raise ValueError("No JSON object found in response.")
@@ -66,8 +71,8 @@ Respond ONLY in this JSON format:
         }
 
     except Exception as e:
-        print("🛑 Error during summarization:", str(e))
-        print("🧠 LLM Response:", response["response"][:300] if "response" in locals() else "No response")
+        print("Error during summarization:", str(e))
+        print("LLM Response:", response.get("response", "No response"))
         return {
             "title": "Error generating title",
             "description": f"Error: {str(e)}",
