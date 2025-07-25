@@ -21,7 +21,7 @@ def summarize_controls(control_list):
     prompt = f"""
 You are a cybersecurity compliance assistant tasked with summarizing semantically similar security controls.
 
-Using the following list of security controls, generate a unified title, a concise 2–3 sentence description, and 2–3 implementation steps in strict JSON format.
+Using the following list of security controls, generate a unified title, a concise 2–3 sentence description, and a set of implementation steps in strict JSON format.
 
 ### Input Controls ###
 {formatted_controls}
