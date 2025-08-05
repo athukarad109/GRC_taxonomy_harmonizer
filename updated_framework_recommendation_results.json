@@ -1,0 +1,222 @@
+{
+  "healthcare_startup": {
+    "organization_profile": {
+      "business_sector": "healthcare",
+      "company_size": "startup",
+      "revenue_bracket": "$1M+",
+      "business_locations": [
+        "US"
+      ],
+      "customer_locations": [
+        "US"
+      ],
+      "data_types": [
+        "PHI",
+        "PII"
+      ],
+      "infrastructure": "cloud",
+      "customer_type": "B2B",
+      "existing_frameworks": [],
+      "risk_profile": "medium",
+      "budget_constraints": "low",
+      "implementation_timeline": "3months",
+      "technical_maturity": "basic"
+    },
+    "recommended_frameworks": [
+      {
+        "framework": "CIS Controls",
+        "status": "recommended",
+        "justification": "Best practice framework for smaller organizations"
+      },
+      {
+        "framework": "SOC 2",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "HIPAA",
+        "status": "mandatory",
+        "justification": "Mandatory for healthcare organizations handling patient data; Required for handling Protected Health Information; Mandatory for healthcare organizations handling patient data; Required for handling Protected Health Information"
+      },
+      {
+        "framework": "ISO 27001",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "GDPR",
+        "status": "recommended",
+        "justification": "Required for EU personal data processing"
+      }
+    ]
+  },
+  "financial_company": {
+    "organization_profile": {
+      "business_sector": "finance",
+      "company_size": "medium",
+      "revenue_bracket": "$10M+",
+      "business_locations": [
+        "US",
+        "EU"
+      ],
+      "customer_locations": [
+        "US",
+        "EU",
+        "Asia"
+      ],
+      "data_types": [
+        "Payment Card Data",
+        "PII",
+        "Financial"
+      ],
+      "infrastructure": "hybrid",
+      "customer_type": "B2C",
+      "existing_frameworks": [
+        "PCI DSS"
+      ],
+      "risk_profile": "high",
+      "budget_constraints": "medium",
+      "implementation_timeline": "6months",
+      "technical_maturity": "intermediate"
+    },
+    "recommended_frameworks": [
+      {
+        "framework": "ISO 27001",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "SOC 2",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "GDPR",
+        "status": "mandatory",
+        "justification": "Mandatory for EU data processing activities; Required for EU personal data processing"
+      },
+      {
+        "framework": "HIPAA",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "NIST 800-53",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      }
+    ]
+  },
+  "tech_company": {
+    "organization_profile": {
+      "business_sector": "technology",
+      "company_size": "large",
+      "revenue_bracket": "$100M+",
+      "business_locations": [
+        "US",
+        "EU",
+        "Asia"
+      ],
+      "customer_locations": [
+        "Global"
+      ],
+      "data_types": [
+        "PII",
+        "Customer Data",
+        "Intellectual Property"
+      ],
+      "infrastructure": "cloud",
+      "customer_type": "B2B",
+      "existing_frameworks": [
+        "SOC 2",
+        "ISO 27001",
+        "GDPR"
+      ],
+      "risk_profile": "high",
+      "budget_constraints": "high",
+      "implementation_timeline": "1year",
+      "technical_maturity": "advanced"
+    },
+    "recommended_frameworks": [
+      {
+        "framework": "COBIT",
+        "status": "recommended",
+        "justification": "Appropriate for large enterprise security requirements"
+      },
+      {
+        "framework": "NIST 800-53",
+        "status": "recommended",
+        "justification": "Appropriate for large enterprise security requirements"
+      },
+      {
+        "framework": "CIS Controls",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "PCI DSS",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "HIPAA",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      }
+    ]
+  },
+  "government_contractor": {
+    "organization_profile": {
+      "business_sector": "government",
+      "company_size": "enterprise",
+      "revenue_bracket": "$1B+",
+      "business_locations": [
+        "US"
+      ],
+      "customer_locations": [
+        "US"
+      ],
+      "data_types": [
+        "CUI",
+        "Classified",
+        "PII"
+      ],
+      "infrastructure": "on-premise",
+      "customer_type": "B2G",
+      "existing_frameworks": [
+        "NIST 800-53"
+      ],
+      "risk_profile": "critical",
+      "budget_constraints": "high",
+      "implementation_timeline": "1year",
+      "technical_maturity": "advanced"
+    },
+    "recommended_frameworks": [
+      {
+        "framework": "COBIT",
+        "status": "recommended",
+        "justification": "Appropriate for large enterprise security requirements"
+      },
+      {
+        "framework": "ISO 27001",
+        "status": "recommended",
+        "justification": "Appropriate for large enterprise security requirements"
+      },
+      {
+        "framework": "PCI DSS",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "HIPAA",
+        "status": "recommended",
+        "justification": "Recommended based on industry best practices and organization profile"
+      },
+      {
+        "framework": "GDPR",
+        "status": "recommended",
+        "justification": "Required for EU personal data processing"
+      }
+    ]
+  }
+}
